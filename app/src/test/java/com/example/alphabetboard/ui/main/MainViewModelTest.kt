@@ -23,19 +23,21 @@ class MainViewModelTest {
     }
 
     @Test
-    fun `given provided width = 2000 and height = 2400 when getItemSize() called than return array(500,400)`() {
+    fun `given provided width = 2000 and height = 2400 when getItemSize() called than return Triple(4,500,400)`() {
         val vm = MainViewModel()
         val result = vm.getItemsMatrix(2000, 2400)
-        assertEquals(500, result[0])
-        assertEquals(400, result[1])
+        assertEquals(4, result.first)
+        assertEquals(500, result.second)
+        assertEquals(400, result.third)
     }
 
     @Test
-    fun `given provided width = 2400 and height = 2000 when getItemSize() called than return array(400,500)`() {
+    fun `given provided width = 2400 and height = 2000 when getItemSize() called than return Triple(6,400,500)`() {
         val vm = MainViewModel()
         val result = vm.getItemsMatrix(2400, 2000)
-        assertEquals(400, result[0])
-        assertEquals(500, result[1])
+        assertEquals(6, result.first)
+        assertEquals(400, result.second)
+        assertEquals(500, result.third)
     }
 
     @Test

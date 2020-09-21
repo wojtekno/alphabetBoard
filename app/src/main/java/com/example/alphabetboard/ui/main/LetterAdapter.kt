@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.alphabetboard.R
 import kotlinx.android.synthetic.main.item_letter_tile.view.*
 
-class LetterAdapter(private val dimen : Pair<Int, Int>) : ListAdapter<LetterTile, LetterAdapter.ViewHolder>(DiffUtilCallback) {
+class LetterAdapter(private val dimen: Pair<Int, Int>) :
+    ListAdapter<LetterTile, LetterAdapter.ViewHolder>(DiffUtilCallback) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -18,13 +19,10 @@ class LetterAdapter(private val dimen : Pair<Int, Int>) : ListAdapter<LetterTile
             LayoutInflater.from(parent.context).inflate(R.layout.item_letter_tile, parent, false)
         val lParam = ConstraintLayout.LayoutParams(dimen.first, dimen.second)
         itemView.layoutParams = lParam
-//        d("onCreateViewHolder")
         return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        d("onBinfViewHolder")
-
         holder.bind(getItem(position))
     }
 

@@ -18,30 +18,23 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="3"
+        tools:layout_height="96dp"
         tools:text="A"
-        tools:textSize="32dp"
-        tools:layout_height="96dp"/>
-    <!--        android:textSize="46dp"-->
+        tools:textSize="32dp" />
 
 
     <TextView
         android:id="@+id/hand_tv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:textColor="@android:color/holo_blue_dark"
         android:gravity="center_horizontal"
+        android:textColor="@android:color/holo_blue_dark"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/letter_tv"
         app:layout_constraintVertical_weight="2"
-        tools:text="L"
-        tools:layout_height="48dp"/>
-
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:background="@android:color/holo_red_dark"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+        tools:layout_height="48dp"
+        tools:text="L" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
